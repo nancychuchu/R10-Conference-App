@@ -7,23 +7,15 @@
  */
 
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import About from "./screens/About";
+import { ApolloProvider } from "react-apollo";
+import client from "./config/api";
 
 export default class App extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>This is the about screen...</Text>
-      </View>
-    );
+    return;
+    <ApolloProvider client={client}>
+      <About />;
+    </ApolloProvider>;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
-  }
-});
