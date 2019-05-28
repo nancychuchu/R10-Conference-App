@@ -5,8 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "flex-start",
-    backgroundColor: "#F5FCFF",
-    marginTop: 20,
+    // backgroundColor: "#F5FCFF",
     padding: 10
   },
   logoImage: {

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "./node_modules/react";
 import { Text, View, Image, ScrollView } from "react-native";
 
 import { styles } from "./styles";
@@ -12,7 +12,6 @@ const About = ({ conductData }) => {
           source={require("../../assets/images/r10_logo.png")}
         />
         <View style={styles.divider} />
-
         <Text style={styles.paragraph}>
           R10 is a conference that focuses on just about any topic related to
           dev.
