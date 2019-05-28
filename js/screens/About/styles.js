@@ -3,8 +3,37 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+    backgroundColor: "#F5FCFF",
+    marginTop: 20,
+    padding: 10
+  },
+  logoImage: {
+    width: 180,
+    height: 44,
+    alignSelf: "center",
+    margin: 20,
+    borderBottomWidth: 4,
+    borderColor: "black"
+  },
+  divider: {
+    flex: 1,
+    width: "90%",
+    backgroundColor: "black",
+    height: 4
+  },
+  paragraph: {
+    marginTop: 10
+  },
+  conductHeader: {
+    color: "#9963ea",
+    marginTop: 15,
+    marginBottom: 15
+  },
+  subheader: {
+    fontSize: 20,
+    marginTop: 20,
+    fontWeight: "bold"
   }
 });

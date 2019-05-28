@@ -13,9 +13,10 @@ import client from "./config/api";
 
 export default class App extends Component {
   render() {
-    return;
-    <ApolloProvider client={client}>
-      <About />;
-    </ApolloProvider>;
+    return (
+      <ApolloProvider client={client}>
+        <About />
+      </ApolloProvider>
+    );
   }
 }
