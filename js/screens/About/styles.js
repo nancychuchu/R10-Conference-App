@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "flex-start",
     // backgroundColor: "#F5FCFF",
-    padding: 10
+    padding: 10,
+    fontFamily: "Montserrat"
   },
   logoImage: {
     width: 180,

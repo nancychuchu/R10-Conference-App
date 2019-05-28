@@ -6,6 +6,9 @@ class SessionContainer extends Component {
     super(props);
     this.state = {};
   }
+  static navigationOptions = {
+    title: "Session"
+  };
   render() {
     return <Session />;
   }

@@ -6,10 +6,12 @@ class FavesContainer extends Component {
     super(props);
     this.state = {};
   }
+  static navigationOptions = {
+    title: "Faves"
+  };
   render() {
     return <Faves />;
   }
 }
 
 export default FavesContainer;
-

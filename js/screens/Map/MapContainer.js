@@ -6,6 +6,9 @@ class MapContainer extends Component {
     super(props);
     this.state = {};
   }
+  static navigationOptions = {
+    title: "Map"
+  };
   render() {
     return <Map />;
   }

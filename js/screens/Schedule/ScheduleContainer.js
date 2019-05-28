@@ -6,6 +6,9 @@ class ScheduleContainer extends Component {
     super(props);
     this.state = {};
   }
+  static navigationOptions = {
+    title: "Schedule"
+  };
   render() {
     return <Schedule />;
   }

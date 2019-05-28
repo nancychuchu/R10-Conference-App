@@ -6,6 +6,9 @@ class SpeakerContainer extends Component {
     super(props);
     this.state = {};
   }
+  static navigationOptions = {
+    title: "Speaker"
+  };
   render() {
     return <Speaker />;
   }
