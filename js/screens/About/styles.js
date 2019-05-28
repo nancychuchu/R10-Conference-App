@@ -19,9 +19,9 @@ export const styles = StyleSheet.create({
   },
   divider: {
     flex: 1,
-    width: "90%",
-    backgroundColor: "black",
-    height: 4
+    width: "100%",
+    backgroundColor: "#e6e6e6",
+    height: 1
   },
   paragraph: {
     marginTop: 10
@@ -31,9 +31,16 @@ export const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 15
   },
+  conduct: {
+    marginBottom: 15
+  },
   subheader: {
     fontSize: 20,
     marginTop: 20,
     fontWeight: "bold"
+  },
+  footer: {
+    marginTop: 10,
+    marginBottom: 10
   }
 });

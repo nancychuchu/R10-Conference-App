@@ -11,7 +11,7 @@ const About = ({ conductData }) => {
           style={styles.logoImage}
           source={require("../../assets/images/r10_logo.png")}
         />
-        {/* <View style={styles.divider} />; */}
+        <View style={styles.divider} />
         {/* <Divider style={{ backgroundColor: "black" }} /> */}
         <Text style={styles.paragraph}>
           R10 is a conference that focuses on just about any topic related to
@@ -29,6 +29,7 @@ const About = ({ conductData }) => {
             <Text style={styles.conduct}>{code.description}</Text>
           </View>
         ))}
+        <View style={styles.divider} />
         <Text style={styles.footer}> © RED Academy 2019</Text>
       </View>
     </ScrollView>
