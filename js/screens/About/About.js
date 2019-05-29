@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, Image, ScrollView } from "react-native";
 
-import { styles } from "./styles";
+import styles from "./styles";
 
 const About = ({ conductData }) => {
   return (
