@@ -12,6 +12,7 @@
     ]
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.4.2",
     "apollo-boost": "^0.3.0",
     "apollo-client": "^2.6.0",
     "graphql": "^14.3.1",

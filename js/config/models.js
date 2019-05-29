@@ -1,0 +1,29 @@
+import AsyncStorage from "@react-native-community/async-storage";
+
+export const createFave = async id => {
+  try {
+    await AsyncStorage.setItem(
+      `id`,
+      JSON.stringify({ id, faveOn: new Date() })
+    );
+  } catch (e) {
+    return false;
+  }
+};
+
+export const queryFave = async id => {
+  try {
+    const keys = await AsyncStorage.getAllKeys();
+    return await AsyncStorage.multiGet(keys);
+  } catch (e) {
+    return false;
+  }
+};
+
+export const removeFave = async id => {
+  try {
+    await AsyncStorage.removeItem(`${id}`);
+  } catch (e) {
+    return false;
+  }
+};
