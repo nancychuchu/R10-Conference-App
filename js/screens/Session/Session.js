@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Platform
+} from "react-native";
 import moment from "moment";
 import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
@@ -17,10 +24,15 @@ const Session = ({
   console.log("id", id);
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.header}>
         <Text style={styles.location}>{location}</Text>
         {faveIds.includes(id) ? (
-          <Ionicons name="ios-heart" size={25} color="red" />
+          // <Ionicons name="ios-heart" size={25} color="red" />
+          <Ionicons
+            name={Platform.OS === "ios" ? "ios-heart" : "md-heart"}
+            color="#cf392a"
+            size={25}
+          />
         ) : null}
       </View>
       <Text style={styles.title}>{title}</Text>

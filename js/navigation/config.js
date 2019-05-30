@@ -1,7 +1,9 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Platform, TouchableOpacity } from "react-native";
 import { Header } from "react-navigation";
 import LinearGradient from "react-native-linear-gradient";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import globalStyle from "../config/styles";
 
 const GradientHeader = props => (
   <View style={{ backgroundColor: "white", overflow: "hidden" }}>
@@ -23,6 +25,17 @@ export const sharedNavigationOptions = navigation => ({
   },
   headerTitleStyle: {
     color: "white",
-    fontFamily: "Montserrat"
-  }
+    fontFamily: globalStyle.mainfont
+  },
+  headerLeft:
+    Platform.OS === "ios" ? null : (
+      <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+        <Ionicons
+          name="md-menu"
+          size={25}
+          color="white"
+          style={{ padding: 10 }}
+        />
+      </TouchableOpacity>
+    )
 });

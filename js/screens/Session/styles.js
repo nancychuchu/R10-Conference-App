@@ -1,12 +1,13 @@
 import { StyleSheet } from "react-native";
+import globalStyle from "../../config/styles";
+import { global } from "core-js";
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10,
-    fontFamily: "Montserrat"
+    padding: 10
   },
   location: {
-    color: "#e6e6e6",
+    color: globalStyle.medGreyColor,
     paddingTop: 5,
     paddingBottom: 5
   },
@@ -16,12 +17,12 @@ const styles = StyleSheet.create({
     paddingBottom: 5
   },
   time: {
-    color: "#cf392a",
+    color: globalStyle.redColor,
     paddingTop: 5,
     paddingBottom: 5
   },
   presented: {
-    color: "#e6e6e6",
+    color: globalStyle.medGreyColor,
     paddingTop: 15,
     paddingBottom: 5
   },
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
   divider: {
     flex: 1,
     width: "100%",
-    backgroundColor: "#e6e6e6",
+    backgroundColor: globalStyle.medGreyColor,
     height: 1
   },
   gradient: {
