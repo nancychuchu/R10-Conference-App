@@ -1,6 +1,6 @@
 //import liraries
 import React from "react";
-import { View, Text, TouchableHighlight } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import { withNavigation } from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -8,7 +8,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 // create a component
 const SessionListItem = ({ item, index, faveIds, navigation }) => {
   return (
-    <TouchableHighlight
+    <TouchableOpacity
       onPress={() => {
         navigation.navigate("Session", {
           ...item
@@ -24,7 +24,7 @@ const SessionListItem = ({ item, index, faveIds, navigation }) => {
           <Ionicons name="ios-heart" size={10} color="red" />
         ) : null}
       </View>
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 };
 

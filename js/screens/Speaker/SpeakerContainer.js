@@ -10,7 +10,8 @@ class SpeakerContainer extends Component {
     title: "Speaker"
   };
   render() {
-    return <Speaker />;
+    console.log(this.props);
+    return <Speaker speaker={this.props.navigation.state.params.speaker} />;
   }
 }
 

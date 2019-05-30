@@ -11,12 +11,15 @@ import moment from "moment";
 import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { withNavigation } from "react-navigation";
+import globalStyles from "../../config/styles";
 
 const Session = ({
   sessionInfo,
   faveIds,
   addFaveSession,
-  removeFaveSession
+  removeFaveSession,
+  navigation
 }) => {
   console.log("sessionInfo", sessionInfo);
   console.log(faveIds);
@@ -32,6 +35,7 @@ const Session = ({
             name={Platform.OS === "ios" ? "ios-heart" : "md-heart"}
             color="#cf392a"
             size={25}
+            style={{ alignSelf: "flex-start" }}
           />
         ) : null}
       </View>
@@ -39,7 +43,14 @@ const Session = ({
       <Text style={styles.time}> {moment(time).format("LT")}</Text>
       <Text style={styles.description}>{description}</Text>
       {speaker !== null ? (
-        <View>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            navigation.push("Speaker", {
+              speaker: sessionInfo.speaker
+            });
+          }}
+        >
           <Text style={styles.presented}>Presented by: </Text>
           <View style={styles.speaker}>
             <Image
@@ -48,7 +59,7 @@ const Session = ({
             />
             <Text style={styles.name}>{speaker.name} </Text>
           </View>
-        </View>
+        </TouchableOpacity>
       ) : null}
 
       <View style={styles.divider} />
@@ -60,7 +71,7 @@ const Session = ({
         }}
       >
         <LinearGradient
-          colors={["#e4b5cb", "#722ae6"]}
+          colors={[globalStyles.purpleColor, globalStyles.blueColor]}
           start={{ x: 0.0, y: 1.0 }}
           end={{ x: 1.0, y: 0.0 }}
           // style={styles.gradient}
@@ -70,7 +81,7 @@ const Session = ({
           ]}
         />
         {console.log("faveIds", faveIds)}
-        <Text>
+        <Text style={styles.btnFont}>
           {faveIds.includes(id) ? "Remove from Faves" : "Add to Faves"}
         </Text>
       </TouchableOpacity>
@@ -78,4 +89,4 @@ const Session = ({
   );
 };
 
-export default Session;
+export default withNavigation(Session);

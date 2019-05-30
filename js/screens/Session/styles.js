@@ -1,6 +1,7 @@
 import { StyleSheet } from "react-native";
 import globalStyle from "../../config/styles";
 import { global } from "core-js";
+import globalStyles from "../../config/styles";
 
 const styles = StyleSheet.create({
   container: {
@@ -47,8 +48,14 @@ const styles = StyleSheet.create({
     // },
   },
   button: {
-    justifyContent: "center"
+    justifyContent: "center",
+    alignContent: "center"
     // alignSelf: "center"
+  },
+  btnFont: {
+    color: "white",
+    // alignSelf: "center",
+    fontFamily: globalStyles.mainfont
   }
 });
 

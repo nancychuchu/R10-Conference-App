@@ -29,13 +29,29 @@ export const sharedNavigationOptions = navigation => ({
   },
   headerLeft:
     Platform.OS === "ios" ? null : (
-      <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
-        <Ionicons
-          name="md-menu"
-          size={25}
-          color="white"
-          style={{ padding: 10 }}
-        />
+      <TouchableOpacity
+        // onPress={() => navigation.toggleDrawer()}
+        onPress={
+          navigation.state.routeName === "Session"
+            ? () => navigation.goBack()
+            : () => navigation.toggleDrawer()
+        }
+      >
+        {navigation.state.routeName === "Session" ? (
+          <Ionicons
+            name="md-arrow-back"
+            size={25}
+            color="white"
+            style={{ padding: 10 }}
+          />
+        ) : (
+          <Ionicons
+            name="md-menu"
+            size={25}
+            color="white"
+            style={{ padding: 10 }}
+          />
+        )}
       </TouchableOpacity>
     )
 });
