@@ -2,9 +2,10 @@ import React from "react";
 import { SectionList, View, Text, TouchableHighlight } from "react-native";
 import styles from "./styles";
 import moment from "moment";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { withNavigation } from "react-navigation";
 
-const Schedule = ({ sessionsData, navigation }) => {
+const Schedule = ({ sessionsData, navigation, faveIds }) => {
   // console.log(sessionsData);
 
   return (
@@ -15,17 +16,18 @@ const Schedule = ({ sessionsData, navigation }) => {
         <TouchableHighlight
           onPress={() => {
             navigation.navigate("Session", {
-              // title: item.title,
-              // location: item.location,
-              // description: item.description,
-              // time: item.startTime
               ...item
             });
           }}
         >
-          <View style={styles.container}>
-            <Text key={index}>{item.title}</Text>
-            <Text style={styles.location}>{item.location}</Text>
+          <View style={styles.sessionContainer}>
+            <View style={styles.container}>
+              <Text key={index}>{item.title}</Text>
+              <Text style={styles.location}>{item.location}</Text>
+            </View>
+            {faveIds.includes(item.id) ? (
+              <Ionicons name="ios-heart" size={10} color="red" />
+            ) : null}
           </View>
         </TouchableHighlight>
       )}

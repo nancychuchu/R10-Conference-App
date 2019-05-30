@@ -4,6 +4,7 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Loader from "../../components/Loader";
 import { formatSessionData } from "../../helpers/dataFormatHelpers";
+import FavesContext from "../../context/FavesContext";
 
 class ScheduleContainer extends Component {
   constructor(props) {
@@ -21,7 +22,16 @@ class ScheduleContainer extends Component {
           console.log(data);
           if (loading || !data) return <Loader />;
           return (
-            <Schedule sessionsData={formatSessionData(data.allSessions)} />
+            <FavesContext.Consumer>
+              {({ faveIds }) => {
+                return (
+                  <Schedule
+                    faveIds={faveIds}
+                    sessionsData={formatSessionData(data.allSessions)}
+                  />
+                );
+              }}
+            </FavesContext.Consumer>
           );
         }}
       </Query>
@@ -33,6 +43,7 @@ class ScheduleContainer extends Component {
 const GET_SESSION_ITEMS = gql`
   query {
     allSessions(orderBy: startTime_ASC) {
+      id
       title
       description
       location

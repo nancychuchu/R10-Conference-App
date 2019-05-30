@@ -12,6 +12,13 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 2,
     backgroundColor: "#e6e6e6"
+  },
+  sessionContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  icon: {
+    justifyContent: "space-around"
   }
 });
 
