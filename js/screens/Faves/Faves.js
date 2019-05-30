@@ -1,14 +1,9 @@
-import React, { Component } from "react";
-import { View, Text } from "react-native";
-import { styles } from "./styles";
+import React from "react";
+import SessionList from "../../components/SessionList";
 
 // create a component
-const Faves = () => {
-  return (
-    <View style={styles.container}>
-      <Text>Faves</Text>
-    </View>
-  );
+const Faves = ({ faveIds, sessionsData }) => {
+  return <SessionList faveIds={faveIds} sessionsData={sessionsData} />;
 };
 
 //make this component available to the app

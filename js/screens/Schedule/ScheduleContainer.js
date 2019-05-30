@@ -3,7 +3,7 @@ import Schedule from "./Schedule";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import Loader from "../../components/Loader";
-import { formatSessionData } from "../../helpers/dataFormatHelpers";
+
 import FavesContext from "../../context/FavesContext";
 
 class ScheduleContainer extends Component {
@@ -25,10 +25,7 @@ class ScheduleContainer extends Component {
             <FavesContext.Consumer>
               {({ faveIds }) => {
                 return (
-                  <Schedule
-                    faveIds={faveIds}
-                    sessionsData={formatSessionData(data.allSessions)}
-                  />
+                  <Schedule faveIds={faveIds} sessionsData={data.allSessions} />
                 );
               }}
             </FavesContext.Consumer>
