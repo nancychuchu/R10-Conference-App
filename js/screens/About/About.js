@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, Image, ScrollView } from "react-native";
-
+import Conduct from "../../components/Conduct";
 import styles from "./styles";
 
 const About = ({ conductData }) => {
@@ -23,12 +23,12 @@ const About = ({ conductData }) => {
           Vancouver, BC.
         </Text>
         <Text style={styles.subheader}>Code of Conduct</Text>
+        {console.log(conductData)}
+
         {conductData.allConducts.map(code => (
-          <View key={code.id}>
-            <Text style={styles.conductHeader}> + {code.title}</Text>
-            <Text style={styles.conduct}>{code.description}</Text>
-          </View>
+          <Conduct key={code.id} code={code} />
         ))}
+
         <View style={styles.divider} />
         <Text style={styles.footer}> © RED Academy 2019</Text>
       </View>
