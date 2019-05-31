@@ -77,10 +77,6 @@ const Session = ({
           start={{ x: 0.0, y: 1.0 }}
           end={{ x: 1.0, y: 0.0 }}
           style={styles.gradient}
-          // style={[
-          //   StyleSheet.absoluteFill,
-          //   { height: 40, width: "60%", borderRadius: 20 }
-          // ]}
         >
           <Text style={styles.btnFont}>
             {faveIds.includes(id) ? "Remove from Faves" : "Add to Faves"}

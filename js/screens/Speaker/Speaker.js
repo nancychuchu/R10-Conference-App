@@ -2,7 +2,7 @@ import React from "react";
 import {
   Text,
   View,
-  StyleSheet,
+  Linking,
   ScrollView,
   Platform,
   Image,
@@ -35,7 +35,7 @@ const Speaker = ({ speaker, navigation }) => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Linking.openURL("https://reactnativecode.com")}
+          onPress={() => Linking.openURL(speaker.url)}
         >
           <LinearGradient
             colors={[globalStyles.purpleColor, globalStyles.blueColor]}
