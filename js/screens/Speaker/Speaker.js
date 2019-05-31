@@ -1,14 +1,24 @@
 import React from "react";
-import { Text, View, Platform, Image, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  ScrollView,
+  Platform,
+  Image,
+  TouchableOpacity
+} from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import styles from "./styles";
+import globalStyles from "../../config/styles";
+import LinearGradient from "react-native-linear-gradient";
 
-const Speaker = ({ speaker }) => {
+const Speaker = ({ speaker, navigation }) => {
   console.log(speaker);
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => goBack()}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Ionicons
             name={Platform.OS === "ios" ? "ios-close" : "md-close"}
             color="white"
@@ -22,8 +32,24 @@ const Speaker = ({ speaker }) => {
         <Image style={styles.avatar} source={{ uri: speaker.image }} />
         <Text style={styles.name}>{speaker.name}</Text>
         <Text style={styles.bio}>{speaker.bio}</Text>
+        {/* <TouchableOpacity
+          style={styles.button}
+          onPress={() => Linking.openURL("https://reactnativecode.com")}
+        >
+          <LinearGradient
+            colors={[globalStyles.purpleColor, globalStyles.blueColor]}
+            start={{ x: 0.0, y: 1.0 }}
+            end={{ x: 1.0, y: 0.0 }}
+            style={[
+              StyleSheet.absoluteFill,
+              { height: 40, width: "60%", borderRadius: 20 }
+            ]}
+          >
+            <Text style={styles.btnFont}>Find out more in Wikipedia</Text>
+          </LinearGradient>
+        </TouchableOpacity> */}
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

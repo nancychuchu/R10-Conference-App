@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import { Text } from "react-native";
 import Loader from "../../components/Loader";
 import About from "./About";
 

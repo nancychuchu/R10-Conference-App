@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+import globalStyles from "../../config/styles";
 const styles = StyleSheet.create({
   subHeader: {
     flex: 1,
@@ -12,6 +12,14 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 2,
     backgroundColor: "#e6e6e6"
+  },
+  time: {
+    fontFamily: globalStyles.mainFont,
+    fontWeight: "bold",
+    color: "#000000",
+    marginLeft: 10,
+    paddingTop: 3,
+    paddingBottom: 3
   }
 });
 

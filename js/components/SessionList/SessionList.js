@@ -7,20 +7,18 @@ import { formatSessionData } from "../../helpers/dataFormatHelpers";
 import SessionListItem from "../SessionListItem";
 
 // create a component
-const SessionList = ({ sessionsData, faveIds }) => {
+const SessionList = ({ sessionsData, faveIds, section }) => {
   const sessions = formatSessionData(sessionsData);
   console.log(sessionsData);
   return (
     <SectionList
       ItemSeparatorComponent={() => <View style={styles.separator} />}
-      renderItem={({ item, index, section }) => (
+      renderItem={({ item, index }) => (
         <SessionListItem item={item} index={index} faveIds={faveIds} />
       )}
       renderSectionHeader={({ section: { title } }) => (
         <View style={{ backgroundColor: "#e6e6e6" }}>
-          <Text style={{ fontWeight: "bold" }}>
-            {moment(title).format("LT")}
-          </Text>
+          <Text style={styles.time}>{moment(title).format("LT")}</Text>
         </View>
       )}
       sections={sessions}

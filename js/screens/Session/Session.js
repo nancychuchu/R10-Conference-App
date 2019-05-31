@@ -5,7 +5,8 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
-  Platform
+  Platform,
+  ScrollView
 } from "react-native";
 import moment from "moment";
 import styles from "./styles";
@@ -21,12 +22,12 @@ const Session = ({
   removeFaveSession,
   navigation
 }) => {
-  console.log("sessionInfo", sessionInfo);
-  console.log(faveIds);
+  // console.log("sessionInfo", sessionInfo);
+  // console.log(faveIds);
   const { title, location, time, description, speaker, id } = sessionInfo;
-  console.log("id", id);
+  // console.log("id", id);
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.location}>{location}</Text>
         {faveIds.includes(id) ? (
@@ -42,6 +43,7 @@ const Session = ({
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.time}> {moment(time).format("LT")}</Text>
       <Text style={styles.description}>{description}</Text>
+
       {speaker !== null ? (
         <TouchableOpacity
           style={styles.button}
@@ -74,18 +76,18 @@ const Session = ({
           colors={[globalStyles.purpleColor, globalStyles.blueColor]}
           start={{ x: 0.0, y: 1.0 }}
           end={{ x: 1.0, y: 0.0 }}
-          // style={styles.gradient}
-          style={[
-            StyleSheet.absoluteFill,
-            { height: 40, width: "60%", borderRadius: 20 }
-          ]}
-        />
-        {console.log("faveIds", faveIds)}
-        <Text style={styles.btnFont}>
-          {faveIds.includes(id) ? "Remove from Faves" : "Add to Faves"}
-        </Text>
+          style={styles.gradient}
+          // style={[
+          //   StyleSheet.absoluteFill,
+          //   { height: 40, width: "60%", borderRadius: 20 }
+          // ]}
+        >
+          <Text style={styles.btnFont}>
+            {faveIds.includes(id) ? "Remove from Faves" : "Add to Faves"}
+          </Text>
+        </LinearGradient>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 

@@ -1,62 +1,67 @@
 import { StyleSheet } from "react-native";
-import globalStyle from "../../config/styles";
-import { global } from "core-js";
 import globalStyles from "../../config/styles";
 
 const styles = StyleSheet.create({
   container: {
-    padding: 10
+    padding: 20
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between"
   },
   location: {
-    color: globalStyle.medGreyColor,
+    color: globalStyles.medGreyColor,
     paddingTop: 5,
     paddingBottom: 5
   },
   title: {
     fontSize: 20,
+    fontFamily: globalStyles.mainfont,
     paddingTop: 5,
     paddingBottom: 5
   },
   time: {
-    color: globalStyle.redColor,
+    color: globalStyles.redColor,
     paddingTop: 5,
     paddingBottom: 5
   },
   presented: {
-    color: globalStyle.medGreyColor,
+    color: globalStyles.medGreyColor,
     paddingTop: 15,
     paddingBottom: 5
   },
   speaker: {
     flexDirection: "row",
     paddingTop: 5,
-    paddingBottom: 5
+    paddingBottom: 15,
+    alignContent: "center"
   },
   name: {
     fontWeight: "bold"
   },
   divider: {
-    flex: 1,
     width: "100%",
-    backgroundColor: globalStyle.medGreyColor,
+    backgroundColor: globalStyles.medGreyColor,
     height: 1
   },
   gradient: {
-    // absoluteFill: {
-    //   height: 40,
-    //   width: "60%"
-    // },
-  },
-  button: {
-    justifyContent: "center",
-    alignContent: "center"
-    // alignSelf: "center"
+    height: 40,
+    width: "60%",
+    borderRadius: 20,
+    margin: 40,
+    alignSelf: "center",
+    justifyContent: "center"
   },
   btnFont: {
     color: "white",
-    // alignSelf: "center",
+    alignSelf: "center",
     fontFamily: globalStyles.mainfont
   }
+  // button: {
+  //   height: 40,
+  //   width: "60%",
+  //   margin: 30
+  // }
 });
 
 export default styles;
