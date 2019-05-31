@@ -41,12 +41,12 @@ const styles = StyleSheet.create({
   },
   divider: {
     width: "100%",
-    backgroundColor: globalStyles.medGreyColor,
+    backgroundColor: globalStyles.lightGrey,
     height: 1
   },
   gradient: {
     height: 40,
-    width: "60%",
+    width: "80%",
     borderRadius: 20,
     margin: 40,
     alignSelf: "center",
@@ -57,11 +57,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     fontFamily: globalStyles.mainfont
   }
-  // button: {
-  //   height: 40,
-  //   width: "60%",
-  //   margin: 30
-  // }
 });
 
 export default styles;

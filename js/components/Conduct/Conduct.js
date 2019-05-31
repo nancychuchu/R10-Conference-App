@@ -63,7 +63,6 @@ class Conduct extends Component {
     };
     console.log(animatedStyles);
 
-    console.log("here");
     return (
       <TouchableOpacity onPress={() => this.onClickHandle()}>
         <View style={styles.conductHeader}>

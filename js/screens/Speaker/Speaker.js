@@ -32,7 +32,8 @@ const Speaker = ({ speaker, navigation }) => {
         <Image style={styles.avatar} source={{ uri: speaker.image }} />
         <Text style={styles.name}>{speaker.name}</Text>
         <Text style={styles.bio}>{speaker.bio}</Text>
-        {/* <TouchableOpacity
+
+        <TouchableOpacity
           style={styles.button}
           onPress={() => Linking.openURL("https://reactnativecode.com")}
         >
@@ -40,14 +41,11 @@ const Speaker = ({ speaker, navigation }) => {
             colors={[globalStyles.purpleColor, globalStyles.blueColor]}
             start={{ x: 0.0, y: 1.0 }}
             end={{ x: 1.0, y: 0.0 }}
-            style={[
-              StyleSheet.absoluteFill,
-              { height: 40, width: "60%", borderRadius: 20 }
-            ]}
+            style={styles.gradient}
           >
             <Text style={styles.btnFont}>Find out more in Wikipedia</Text>
           </LinearGradient>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );

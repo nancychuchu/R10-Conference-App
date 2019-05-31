@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "flex-start",
     // backgroundColor: "#F5FCFF",
-    padding: 10,
-    fontFamily: "Montserrat"
+    padding: 10
   },
   logoImage: {
     width: 180,
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
   divider: {
     flex: 1,
     width: "100%",
-    backgroundColor: "#e6e6e6",
+    backgroundColor: globalStyles.lightGrey,
     height: 1
   },
   paragraph: {
