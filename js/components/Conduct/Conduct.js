@@ -13,38 +13,53 @@ import styles from "./styles";
 class Conduct extends Component {
   constructor(props) {
     super(props);
-    this.state = { isOpen: false, rotate: new Animated.Value(0) };
+    this.state = {
+      isOpen: false,
+      rotate: new Animated.Value(0),
+      scaleValue: new Animated.Value(0)
+    };
   }
   onClickHandle = () => {
     console.log("heyoooo");
     const currentIsOpen = this.state.isOpen;
 
-    const animation = Animated.timing(this.state.rotate, {
-      toValue: 1,
-      duration: 1000
-    });
+    const animation = Animated.parallel([
+      Animated.timing(this.state.rotate, {
+        toValue: 1,
+        duration: 1000
+      }),
+      Animated.timing(this.state.scaleValue, {
+        toValue: currentIsOpen ? 0 : 1,
+        duration: 1000
+      })
+    ]);
+
     animation.start(animation => {
       if (animation.finished) {
         this.setState({ rotate: new Animated.Value(0) });
       }
     });
-
     LayoutAnimation.easeInEaseOut();
     this.setState({ isOpen: !currentIsOpen });
   };
 
   render() {
     const { code } = this.props;
-    const { isOpen, rotate } = this.state;
+    const { isOpen, rotate, scaleValue } = this.state;
     const paragraph = <Text style={styles.conduct}>{code.description}</Text>;
 
     const spin = rotate.interpolate({
       inputRange: [0, 1],
-      outputRange: ["0deg", "720deg"]
+      outputRange: isOpen ? ["0deg", "360deg"] : ["0deg", "-360deg"]
+    });
+
+    const scale = scaleValue.interpolate({
+      inputRange: [0, 1],
+      outputRange: [1, 2]
     });
 
     const animatedStyles = {
-      transform: [{ rotate: spin }]
+      transform: [{ rotate: spin }, { scaleX: scale }, { scaleY: scale }]
     };
     console.log(animatedStyles);
 
