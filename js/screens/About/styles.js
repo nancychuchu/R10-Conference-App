@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import globalStyles from "../../config/styles";
 
 const styles = StyleSheet.create({
   container: {
@@ -24,20 +25,14 @@ const styles = StyleSheet.create({
     height: 1
   },
   paragraph: {
-    marginTop: 10
-  },
-  conductHeader: {
-    color: "#9963ea",
-    marginTop: 15,
-    marginBottom: 15
-  },
-  conduct: {
-    marginBottom: 15
+    marginTop: 10,
+    fontFamily: globalStyles.mainfont
   },
   subheader: {
     fontSize: 20,
     marginTop: 20,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    fontFamily: globalStyles.mainfont
   },
   footer: {
     marginTop: 10,

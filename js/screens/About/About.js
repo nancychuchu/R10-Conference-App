@@ -17,7 +17,7 @@ const About = ({ conductData }) => {
           R10 is a conference that focuses on just about any topic related to
           dev.
         </Text>
-        <Text style={styles.subheader}>Date and Venue</Text>
+        <Text style={styles.subheader}>Date & Venue</Text>
         <Text style={styles.paragraph}>
           The R10 conference will take place on Tuesday, June 27th, 2019 in
           Vancouver, BC.
