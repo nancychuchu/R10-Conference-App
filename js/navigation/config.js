@@ -28,15 +28,30 @@ export const sharedNavigationOptions = navigation => ({
     fontFamily: globalStyle.mainfont
   },
   headerLeft:
-    Platform.OS === "ios" ? null : (
+    Platform.OS === "ios" ? (
       <TouchableOpacity
-        // onPress={() => navigation.toggleDrawer()}
         onPress={
           navigation.state.routeName === "Session"
             ? () => navigation.goBack()
-            : () => navigation.toggleDrawer()
+            : null
         }
       >
+        {navigation.state.routeName === "Session" ? (
+          <Ionicons
+            name="ios-arrow-back"
+            size={25}
+            color="white"
+            style={{ padding: 10 }}
+          />
+        ) : null}
+      </TouchableOpacity>
+    ) : (
+      <TouchableOpacity>
+        onPress=
+        {navigation.state.routeName === "Session"
+          ? () => navigation.goBack()
+          : () => navigation.toggleDrawer()}
+        >
         {navigation.state.routeName === "Session" ? (
           <Ionicons
             name="md-arrow-back"
