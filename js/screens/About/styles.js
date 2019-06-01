@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "flex-start",
-    // backgroundColor: "#F5FCFF",
-    padding: 10
+    padding: 15
   },
   logoImage: {
     width: 180,
@@ -24,13 +23,14 @@ const styles = StyleSheet.create({
     height: 1
   },
   paragraph: {
-    marginTop: 10,
-    fontFamily: globalStyles.mainfont
+    marginTop: 13,
+    fontFamily: globalStyles.mainfont,
+    fontWeight: "200"
   },
   subheader: {
     fontSize: 20,
     marginTop: 20,
-    fontWeight: "bold",
+    fontWeight: "700",
     fontFamily: globalStyles.mainfont
   },
   footer: {

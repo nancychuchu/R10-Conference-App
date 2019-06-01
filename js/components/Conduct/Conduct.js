@@ -67,7 +67,7 @@ class Conduct extends Component {
       <TouchableOpacity onPress={() => this.onClickHandle()}>
         <View style={styles.conductHeader}>
           <Animated.Text style={[styles.title, animatedStyles]}>
-            {isOpen ? "-" : "+"}
+            {!isOpen ? "+" : "-"}
           </Animated.Text>
           <Text style={styles.title}>
             {"  "} {code.title}

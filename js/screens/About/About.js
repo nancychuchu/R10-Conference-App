@@ -12,7 +12,6 @@ const About = ({ conductData }) => {
           source={require("../../assets/images/r10_logo.png")}
         />
         <View style={styles.divider} />
-
         <Text style={styles.paragraph}>
           R10 is a conference that focuses on just about any topic related to
           dev.
@@ -23,12 +22,9 @@ const About = ({ conductData }) => {
           Vancouver, BC.
         </Text>
         <Text style={styles.subheader}>Code of Conduct</Text>
-        {console.log(conductData)}
-
         {conductData.allConducts.map(code => (
           <Conduct key={code.id} code={code} />
         ))}
-
         <View style={styles.divider} />
         <Text style={styles.footer}> © RED Academy 2019</Text>
       </View>

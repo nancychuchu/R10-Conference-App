@@ -1,9 +1,10 @@
 //import liraries
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Platform } from "react-native";
 import styles from "./styles";
 import { withNavigation } from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import globalStyles from "../../config/styles";
 
 // create a component
 const SessionListItem = ({ item, index, faveIds, navigation }) => {
@@ -16,7 +17,7 @@ const SessionListItem = ({ item, index, faveIds, navigation }) => {
       }}
     >
       <View style={styles.sessionContainer}>
-        <View style={styles.container}>
+        <View>
           <Text style={styles.title} key={index}>
             {item.title}
           </Text>
@@ -24,9 +25,9 @@ const SessionListItem = ({ item, index, faveIds, navigation }) => {
         </View>
         {faveIds.includes(item.id) ? (
           <Ionicons
-            name="ios-heart"
-            size={15}
-            color="red"
+            name={Platform.OS === "ios" ? "ios-heart" : "md-heart"}
+            size={14}
+            color={globalStyles.redColor}
             style={styles.icon}
           />
         ) : null}

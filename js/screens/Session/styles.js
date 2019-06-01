@@ -11,33 +11,46 @@ const styles = StyleSheet.create({
   },
   location: {
     color: globalStyles.medGreyColor,
+    fontFamily: globalStyles.mainfont,
+    fontWeight: "700",
+    paddingTop: 5,
+    paddingBottom: 5
+  },
+  description: {
+    fontFamily: globalStyles.mainfont,
+    fontWeight: "200",
     paddingTop: 5,
     paddingBottom: 5
   },
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontFamily: globalStyles.mainfont,
     paddingTop: 5,
     paddingBottom: 5
   },
   time: {
     color: globalStyles.redColor,
+    fontFamily: globalStyles.mainfont,
+    fontWeight: "700",
     paddingTop: 5,
     paddingBottom: 5
   },
   presented: {
     color: globalStyles.medGreyColor,
-    paddingTop: 15,
+    fontFamily: globalStyles.mainfont,
+    fontWeight: "600",
+    paddingTop: 20,
     paddingBottom: 5
   },
   speaker: {
     flexDirection: "row",
-    paddingTop: 5,
-    paddingBottom: 15,
+    marginTop: 5,
+    marginBottom: 15,
     alignContent: "center"
   },
   name: {
-    fontWeight: "bold"
+    fontWeight: "bold",
+    alignSelf: "center"
   },
   divider: {
     width: "100%",
@@ -48,7 +61,7 @@ const styles = StyleSheet.create({
     height: 40,
     width: "60%",
     borderRadius: 20,
-    margin: 40,
+    margin: 20,
     alignSelf: "center",
     justifyContent: "center"
   },
@@ -56,6 +69,12 @@ const styles = StyleSheet.create({
     color: "white",
     alignSelf: "center",
     fontFamily: globalStyles.mainfont
+  },
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 10
   }
 });
 

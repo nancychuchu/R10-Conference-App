@@ -3,19 +3,27 @@ import globalStyles from "../../config/styles";
 
 const styles = StyleSheet.create({
   container: {
-    // width: "100%",
     backgroundColor: "#000000",
-    flex: 1
+    flex: 1,
+    alignContent: "center"
   },
   header: {
     flexDirection: "row",
-    // width: "100%",
-    margin: 10
+    margin: 10,
+    justifyContent: "center"
   },
   title: {
     color: "#FFFFFF",
-    paddingBottom: 30,
-    alignSelf: "center"
+    paddingBottom: 15,
+    alignSelf: "center",
+    margin: 25,
+    fontFamily: globalStyles.mainfont,
+    fontWeight: "600"
+  },
+  close: {
+    position: "absolute",
+    top: 15,
+    left: 5
   },
   profile: {
     flex: 1,

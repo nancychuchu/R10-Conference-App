@@ -18,11 +18,14 @@ const Speaker = ({ speaker, navigation }) => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+        <TouchableOpacity
+          style={styles.close}
+          onPress={() => navigation.goBack()}
+        >
           <Ionicons
             name={Platform.OS === "ios" ? "ios-close" : "md-close"}
+            size={30}
             color="white"
-            size={25}
           />
         </TouchableOpacity>
         <Text style={styles.title}> About the Speaker </Text>
@@ -35,7 +38,17 @@ const Speaker = ({ speaker, navigation }) => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => Linking.openURL(speaker.url)}
+          onPress={() =>
+            Linking.canOpenURL(speaker.url)
+              .then(supported => {
+                if (!supported) {
+                  console.log("Can't handle url:" + speaker.url);
+                } else {
+                  return Linking.openURL(speaker.url);
+                }
+              })
+              .catch(err => console.error("An error occurred", err))
+          }
         >
           <LinearGradient
             colors={[globalStyles.purpleColor, globalStyles.blueColor]}

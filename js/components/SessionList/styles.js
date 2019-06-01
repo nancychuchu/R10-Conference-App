@@ -1,25 +1,19 @@
 import { StyleSheet } from "react-native";
 import globalStyles from "../../config/styles";
 const styles = StyleSheet.create({
-  subHeader: {
-    flex: 1,
-    padding: 2
-  },
-  container: {
-    padding: 3
-  },
   separator: {
     width: "100%",
-    height: 2,
-    backgroundColor: "#e6e6e6"
+    height: 1.5,
+    backgroundColor: globalStyles.lightGrey
   },
   time: {
     fontFamily: globalStyles.mainFont,
-    fontWeight: "bold",
+    fontWeight: "700",
+    fontSize: 12,
     color: "#000000",
     marginLeft: 10,
-    paddingTop: 3,
-    paddingBottom: 3
+    paddingTop: 4,
+    paddingBottom: 4
   }
 });
 

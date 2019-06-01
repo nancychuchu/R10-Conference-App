@@ -12,15 +12,16 @@ const styles = StyleSheet.create({
   },
   title: {
     paddingTop: 3,
-    paddingBottom: 3,
+    paddingBottom: 4,
     fontWeight: "bold",
     fontFamily: globalStyles.mainfont,
     color: "#000000",
-    fontSize: 15
+    fontSize: 14
   },
   location: {
     fontFamily: globalStyles.mainfont,
-    color: globalStyles.medGreyColor
+    color: globalStyles.medGreyColor,
+    fontSize: 12
   }
 });
 
