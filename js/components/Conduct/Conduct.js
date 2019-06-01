@@ -20,17 +20,16 @@ class Conduct extends Component {
     };
   }
   onClickHandle = () => {
-    console.log("heyoooo");
     const currentIsOpen = this.state.isOpen;
 
     const animation = Animated.parallel([
       Animated.timing(this.state.rotate, {
         toValue: 1,
-        duration: 1000
+        duration: 300
       }),
       Animated.timing(this.state.scaleValue, {
         toValue: currentIsOpen ? 0 : 1,
-        duration: 1000
+        duration: 300
       })
     ]);
 
@@ -55,13 +54,12 @@ class Conduct extends Component {
 
     const scale = scaleValue.interpolate({
       inputRange: [0, 1],
-      outputRange: [1, 2]
+      outputRange: [1, 1.25]
     });
 
     const animatedStyles = {
       transform: [{ rotate: spin }, { scaleX: scale }, { scaleY: scale }]
     };
-    console.log(animatedStyles);
 
     return (
       <TouchableOpacity onPress={() => this.onClickHandle()}>
