@@ -7,7 +7,7 @@ import { formatSessionData } from "../../helpers/dataFormatHelpers";
 import SessionListItem from "../SessionListItem";
 
 // create a component
-const SessionList = ({ sessionsData, faveIds, section }) => {
+const SessionList = ({ sessionsData, faveIds }) => {
   const sessions = formatSessionData(sessionsData);
   console.log(sessionsData);
   return (
