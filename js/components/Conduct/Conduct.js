@@ -49,7 +49,7 @@ class Conduct extends Component {
 
     const spin = rotate.interpolate({
       inputRange: [0, 1],
-      outputRange: isOpen ? ["0deg", "360deg"] : ["0deg", "-360deg"]
+      outputRange: isOpen ? ["0deg", "180deg"] : ["0deg", "-180deg"]
     });
 
     const scale = scaleValue.interpolate({

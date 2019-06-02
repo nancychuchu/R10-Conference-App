@@ -9,8 +9,9 @@ class MapContainer extends Component {
   static navigationOptions = {
     title: "Map"
   };
+
   render() {
-    return <Map />;
+    return <Map latitude={49.26349} longitude={-123.13135} />;
   }
 }
 
