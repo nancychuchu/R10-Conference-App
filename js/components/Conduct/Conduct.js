@@ -8,6 +8,7 @@ import {
   Animated
 } from "react-native";
 import styles from "./styles";
+import PropTypes from "prop-types";
 
 // create a component
 class Conduct extends Component {
@@ -76,5 +77,9 @@ class Conduct extends Component {
     );
   }
 }
+
+Conduct.propTypes = {
+  code: PropTypes.object.isRequired
+};
 
 export default Conduct;

@@ -19,7 +19,6 @@ class ScheduleContainer extends Component {
     return (
       <Query query={GET_SESSION_ITEMS}>
         {({ loading, data }) => {
-          console.log(data);
           if (loading || !data) return <Loader />;
           return (
             <FavesContext.Consumer>
@@ -36,7 +35,6 @@ class ScheduleContainer extends Component {
   }
 }
 
-//Query everything now. Clear the unnecessary queries later
 const GET_SESSION_ITEMS = gql`
   query {
     allSessions(orderBy: startTime_ASC) {

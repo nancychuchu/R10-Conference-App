@@ -17,7 +17,6 @@ class FavesContainer extends Component {
     return (
       <Query query={GET_SESSION_ITEMS}>
         {({ loading, data }) => {
-          console.log(data);
           if (loading || !data) return <Loader />;
           return (
             <FavesContext.Consumer>

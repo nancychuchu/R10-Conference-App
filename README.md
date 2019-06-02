@@ -39,7 +39,11 @@ react-native run-android
 - Async Storage
 - Apollo
 - Node.js
+
 - [React-Native-Maps](https://github.com/react-native-community/react-native-maps)
+- [React-Navigation]
+- [Moment]
+- [IonIcons]
 
 Programs:
 

@@ -6,7 +6,6 @@ export const createFave = async id => {
       `${id}`,
       JSON.stringify({ id, faveOn: new Date() })
     );
-    console.log("created");
   } catch (e) {
     return false;
   }
@@ -15,7 +14,6 @@ export const createFave = async id => {
 export const queryFaves = async () => {
   try {
     const keys = await AsyncStorage.getAllKeys();
-    console.log("keys", keys);
     return await AsyncStorage.multiGet(keys);
   } catch (e) {
     return false;

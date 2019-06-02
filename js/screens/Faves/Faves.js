@@ -1,10 +1,14 @@
 import React from "react";
 import SessionList from "../../components/SessionList";
+import PropTypes from "prop-types";
 
-// create a component
 const Faves = ({ faveIds, sessionsData }) => {
   return <SessionList faveIds={faveIds} sessionsData={sessionsData} />;
 };
 
-//make this component available to the app
+Faves.propTypes = {
+  faveIds: PropTypes.array.isRequired,
+  sessionsData: PropTypes.array.isRequired
+};
+
 export default Faves;

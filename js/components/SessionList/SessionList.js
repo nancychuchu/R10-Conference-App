@@ -1,15 +1,13 @@
-//import liraries
 import React from "react";
 import { SectionList, View, Text } from "react-native";
 import styles from "./styles";
 import moment from "moment";
 import { formatSessionData } from "../../helpers/dataFormatHelpers";
 import SessionListItem from "../SessionListItem";
+import PropTypes from "prop-types";
 
-// create a component
 const SessionList = ({ sessionsData, faveIds }) => {
   const sessions = formatSessionData(sessionsData);
-  console.log(sessionsData);
   return (
     <SectionList
       ItemSeparatorComponent={() => <View style={styles.separator} />}
@@ -25,6 +23,11 @@ const SessionList = ({ sessionsData, faveIds }) => {
       keyExtractor={(item, index) => item + index}
     />
   );
+};
+
+SessionList.propTypes = {
+  sessionsData: PropTypes.array.isRequired,
+  faveIds: PropTypes.array.isRequired
 };
 
 export default SessionList;

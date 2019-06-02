@@ -2,6 +2,7 @@ import React from "react";
 import { styles } from "./styles";
 import MapView, { Marker } from "react-native-maps";
 import MapPin from "../../assets/images/map_pin.png";
+import PropTypes from "prop-types";
 
 const Map = ({ longitude, latitude }) => {
   const region = {
@@ -16,6 +17,11 @@ const Map = ({ longitude, latitude }) => {
       <Marker coordinate={{ latitude, longitude }} image={MapPin} />
     </MapView>
   );
+};
+
+Map.propTypes = {
+  longitude: PropTypes.number.isRequired,
+  latitude: PropTypes.number.isRequired
 };
 
 export default Map;

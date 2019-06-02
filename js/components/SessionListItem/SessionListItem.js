@@ -5,8 +5,8 @@ import styles from "./styles";
 import { withNavigation } from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import globalStyles from "../../config/styles";
+import PropTypes from "prop-types";
 
-// create a component
 const SessionListItem = ({ item, index, faveIds, navigation }) => {
   return (
     <TouchableOpacity
@@ -36,5 +36,11 @@ const SessionListItem = ({ item, index, faveIds, navigation }) => {
   );
 };
 
-//make this component available to the app
+SessionListItem.propTypes = {
+  item: PropTypes.object.isRequired,
+  faveIds: PropTypes.array.isRequired,
+  index: PropTypes.number.isRequired,
+  navigation: PropTypes.object.isRequired
+};
+
 export default withNavigation(SessionListItem);
