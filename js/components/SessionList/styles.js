@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     fontFamily: globalStyles.mainFont,
     fontWeight: "700",
     fontSize: 12,
-    color: "#000000",
+    color: "black",
     marginLeft: 10,
     paddingTop: 4,
     paddingBottom: 4

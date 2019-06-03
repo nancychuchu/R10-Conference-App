@@ -11,11 +11,16 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   title: {
-    color: "#9963ea",
+    color: globalStyles.purpleColor,
     fontFamily: globalStyles.mainfont,
     fontWeight: "700",
     marginTop: 10,
     marginBottom: 10
+  },
+  symbol: {
+    color: globalStyles.purpleColor,
+    fontFamily: globalStyles.mainfont,
+    fontWeight: "700"
   }
 });
 

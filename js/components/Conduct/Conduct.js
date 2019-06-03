@@ -5,7 +5,9 @@ import {
   Text,
   TouchableOpacity,
   LayoutAnimation,
-  Animated
+  Animated,
+  Platform,
+  UIManager
 } from "react-native";
 import styles from "./styles";
 import PropTypes from "prop-types";
@@ -19,6 +21,10 @@ class Conduct extends Component {
       rotate: new Animated.Value(0),
       scaleValue: new Animated.Value(0)
     };
+    if (Platform.OS === "android") {
+      UIManager.setLayoutAnimationEnabledExperimental &&
+        UIManager.setLayoutAnimationEnabledExperimental(true);
+    }
   }
   onClickHandle = () => {
     const currentIsOpen = this.state.isOpen;
@@ -36,9 +42,15 @@ class Conduct extends Component {
 
     animation.start(animation => {
       if (animation.finished) {
-        this.setState({ rotate: new Animated.Value(0) });
+        this.setState({
+          rotate: new Animated.Value(0),
+          scaleValue: currentIsOpen
+            ? new Animated.Value(0)
+            : new Animated.Value(1)
+        });
       }
     });
+
     LayoutAnimation.easeInEaseOut();
     this.setState({ isOpen: !currentIsOpen });
   };
@@ -55,7 +67,7 @@ class Conduct extends Component {
 
     const scale = scaleValue.interpolate({
       inputRange: [0, 1],
-      outputRange: [1, 1.25]
+      outputRange: [1, 1.1]
     });
 
     const animatedStyles = {
@@ -64,7 +76,7 @@ class Conduct extends Component {
 
     return (
       <TouchableOpacity onPress={() => this.onClickHandle()}>
-        <View style={styles.conductHeader}>
+        <View style={styles.conductHeader} key={code.id}>
           <Animated.Text style={[styles.title, animatedStyles]}>
             {!isOpen ? "+" : "-"}
           </Animated.Text>

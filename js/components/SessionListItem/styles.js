@@ -3,19 +3,22 @@ import globalStyles from "../../config/styles";
 
 const styles = StyleSheet.create({
   sessionContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
     margin: 10
   },
+  locationContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
   icon: {
-    alignSelf: "flex-end"
+    alignSelf: "flex-end",
+    padding: 3
   },
   title: {
     paddingTop: 3,
     paddingBottom: 4,
     fontWeight: "bold",
     fontFamily: globalStyles.mainfont,
-    color: "#000000",
+    color: "black",
     fontSize: 14
   },
   location: {

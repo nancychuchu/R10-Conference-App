@@ -17,20 +17,20 @@ const SessionListItem = ({ item, index, faveIds, navigation }) => {
       }}
     >
       <View style={styles.sessionContainer}>
-        <View>
-          <Text style={styles.title} key={index}>
-            {item.title}
-          </Text>
+        <Text style={styles.title} key={index}>
+          {item.title}
+        </Text>
+        <View style={styles.locationContainer}>
           <Text style={styles.location}>{item.location}</Text>
+          {faveIds.includes(item.id) ? (
+            <Ionicons
+              name={Platform.OS === "ios" ? "ios-heart" : "md-heart"}
+              size={14}
+              color={globalStyles.redColor}
+              style={styles.icon}
+            />
+          ) : null}
         </View>
-        {faveIds.includes(item.id) ? (
-          <Ionicons
-            name={Platform.OS === "ios" ? "ios-heart" : "md-heart"}
-            size={14}
-            color={globalStyles.redColor}
-            style={styles.icon}
-          />
-        ) : null}
       </View>
     </TouchableOpacity>
   );
