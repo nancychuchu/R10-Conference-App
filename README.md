@@ -31,7 +31,7 @@ react-native run-ios --simulator="iPhone SE"
 
 ### To run on Android,
 
-Open emulator, then run:
+Open emulator from Android Studio, then run:
 
 ```bash
 react-native run-android
