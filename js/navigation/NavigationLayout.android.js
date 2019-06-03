@@ -64,15 +64,12 @@ export default createDrawerNavigator(
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
-      drawerIcon: ({ focused, horizontal, tintColor }) => {
+      drawerIcon: ({ focused, tintColor }) => {
         const { routeName } = navigation.state;
         let IconComponent = Ionicons;
         let iconName;
         if (routeName === "About") {
           iconName = `md-information-circle${focused ? "" : "-outline"}`;
-          // Sometimes we want to add badges to some icons.
-          // You can check the implementation below.
-          // IconComponent = HomeIconWithBadge;
         } else if (routeName === "Faves") {
           iconName = `md-heart`;
         } else if (routeName === "Schedule") {
