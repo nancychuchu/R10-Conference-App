@@ -60,7 +60,7 @@ Programs:
 
 ## Personal Learnings
 
-This project provided exposure with using react-native to build an iOS and Android native app in tandem. It practiced the use of React Native's UI components such as <View>, <Text>, <ScrollView> <Image> and <TouchableOpacity> to build up the app's user interface. The Schedule and Faves screens of the app leveraged the use of a <SectionList> component populated with data fetched using GraphQL. The project also provided the opportunity to become familiar with React Native's debugger for troubleshooting.
+This project provided exposure with using react-native to build an iOS and Android native app in tandem. It practiced the use of React Native's UI components such as View, Text, ScrollView, Image and TouchableOpacity to build up the app's user interface. The Schedule and Faves screens of the app leveraged the use of a SectionList component populated with data fetched using GraphQL. The project also provided the opportunity to become familiar with React Native's debugger for troubleshooting.
 
 ## Author
 
