@@ -4,10 +4,10 @@ A React-Native app for both IOS and Android platforms that provides a local deve
 
 ## Screenshots
 
-| IOS                                                                                                                                  | Android                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| ![R10 ScreenShot ios gif](https://github.com/nancychuchu/R10-Conference-App/blob/master/js/assets/screenshots/ios.gif)               | ![R10 ScreenShot Android Gif](https://github.com/nancychuchu/R10-Conference-App/blob/master/js/assets/screenshots/Android2.gif)    |
-| ![R10 ScreenShot Schedule ios](https://github.com/nancychuchu/R10-Conference-App/blob/master/js/assets/screenshots/SchedulePage.png) | ![R10 ScreenShot Schedule android](https://github.com/nancychuchu/R10-Conference-App/blob/master/js/assets/screenshots/android.png |
+| IOS                                                                                                                                  | Android                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| ![R10 ScreenShot ios gif](https://github.com/nancychuchu/R10-Conference-App/blob/master/js/assets/screenshots/ios.gif)               | ![R10 ScreenShot Android Gif](https://github.com/nancychuchu/R10-Conference-App/blob/master/js/assets/screenshots/Android2.gif)     |
+| ![R10 ScreenShot Schedule ios](https://github.com/nancychuchu/R10-Conference-App/blob/master/js/assets/screenshots/SchedulePage.png) | ![R10 ScreenShot Schedule android](https://github.com/nancychuchu/R10-Conference-App/blob/master/js/assets/screenshots/android.png) |
 
 ## Installation
 
