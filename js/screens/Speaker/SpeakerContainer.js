@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import Speaker from "./Speaker";
+import PropTypes from "prop-types";
 
 class SpeakerContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   static navigationOptions = {
     title: "Speaker"
   };
   render() {
-    console.log(this.props);
+    const { navigation } = this.props;
     return (
       <Speaker
-        speaker={this.props.navigation.state.params.speaker}
-        navigation={this.props.navigation}
+        speaker={navigation.state.params.speaker}
+        navigation={navigation}
       />
     );
   }
 }
+
+SpeakerContainer.proptypes = {
+  navigation: PropTypes.object.isRequired
+};
 
 export default SpeakerContainer;

@@ -6,10 +6,6 @@ import gql from "graphql-tag";
 import Loader from "../../components/Loader";
 
 class FavesContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   static navigationOptions = {
     title: "Faves"
   };

@@ -14,7 +14,6 @@ import globalStyles from "../../config/styles";
 import LinearGradient from "react-native-linear-gradient";
 
 const Speaker = ({ speaker, navigation }) => {
-  console.log(speaker);
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>

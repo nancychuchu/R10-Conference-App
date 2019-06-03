@@ -3,10 +3,6 @@ import Map from "./Map";
 import { View, Text, Platform } from "react-native";
 
 class MapContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   static navigationOptions = {
     title: "Map"
   };
