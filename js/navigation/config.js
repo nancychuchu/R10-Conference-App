@@ -46,22 +46,25 @@ export const sharedNavigationOptions = navigation => ({
         ) : null}
       </TouchableOpacity>
     ) : (
-      <TouchableOpacity>
-        onPress=
-        {navigation.state.routeName === "Session"
-          ? () => navigation.goBack()
-          : () => navigation.toggleDrawer()}
-        >
-        {navigation.state.routeName === "Session" ? (
+      <TouchableOpacity
+        onPress={() => {
+          {
+            navigation.state.routeName !== "Session"
+              ? navigation.toggleDrawer()
+              : navigation.goBack();
+          }
+        }}
+      >
+        {navigation.state.routeName !== "Session" ? (
           <Ionicons
-            name="md-arrow-back"
+            name="md-menu"
             size={25}
             color="white"
             style={{ padding: 10 }}
           />
         ) : (
           <Ionicons
-            name="md-menu"
+            name="md-arrow-round-back"
             size={25}
             color="white"
             style={{ padding: 10 }}
